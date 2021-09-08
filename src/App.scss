@@ -1,0 +1,82 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.App {
+    padding: 50px;
+
+    .imageWrapper {
+        background-color: #FFFFFF;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.50);
+        -webkit-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.50);
+        -moz-box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.50);
+        display: inline-block;
+        font-size: 0;
+
+        &.multiple {
+            max-width: 316px;
+        }
+
+        .imageItemView {
+            width: 296px;
+            height: 189px;
+            overflow: hidden;
+            border-radius: 8px;
+
+            &.showMoreImages {
+                position: relative;
+
+                .countOverlayView {
+                    background-color: rgba(0, 0, 0, 0.7);
+                    border-radius: 0px;
+                    height: 100%;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
+                    z-index: 2;
+                    top: 0px;
+                    cursor: pointer;
+
+                    .countView {
+                        z-index: 4;
+                        color: #ffffff;
+                        font-size: 20px;
+                        line-height: 30px;
+                        font-weight: 500;
+                        margin: 0px;
+                        padding: 0px;
+                    }
+                }
+            }
+
+            &.multiple {
+                width: 148px;
+                height: 109px;
+                display: inline-block;
+                font-size: 0;
+                border-radius: 0px;
+            }
+
+            .imageView {
+                width: auto;
+                max-width: 100%;
+                object-fit: cover;
+
+                &.multiple {
+                    height: auto;
+                    max-height: 100%;
+                    width: unset;
+                    max-width: unset;
+                }
+            }
+        }
+    }
+
+}
